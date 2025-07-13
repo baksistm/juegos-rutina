@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Juegos de la Rutina</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Menú Principal -->
+  <div id="main-menu">
+    <h1>¡Bienvenido a los Juegos de la Rutina!</h1>
+    <button onclick="mostrarOpcionesMemoria()">Juego de Memoria</button>
+    <button onclick="iniciarAhorcado()">Juego del Ahorcado</button>
+  </div>
+
+  <!-- Opciones para Juego de Memoria -->
+  <div id="memory-options" style="display:none;">
+    <h2>Juego de Memoria</h2>
+    <p>¿Cómo quieres jugar?</p>
+    <button onclick="iniciarMemoria('single')">Individual</button>
+    <button onclick="iniciarMemoria('double')">Dos Jugadores</button>
+    <button onclick="volverAlMenu()">Volver</button>
+  </div>
+
+  <!-- Juego de Memoria -->
+  <div id="memory-game" style="display:none;">
+    <h2>Juego de Memoria</h2>
+    <div id="memory-status"></div>
+    <div id="memory-board"></div>
+    <button onclick="volverAlMenu()">Volver al Menú</button>
+  </div>
+
+  <!-- Juego del Ahorcado -->
+  <div id="hangman-game" style="display:none;">
+    <h2>Juego del Ahorcado</h2>
+    <div id="hangman-status"></div>
+    <div id="hangman-word"></div>
+    <div id="hangman-letters"></div>
+    <button onclick="volverAlMenu()">Volver al Menú</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
